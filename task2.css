@@ -1,0 +1,51 @@
+body{
+    margin-top: 5%;
+    background-color: #d3d3d3;
+}
+.card-container{
+    background-color: #ffffff;
+    max-width: 35%;
+    margin: 0 auto;
+}
+.top-section{
+    margin-left: 15%;
+    padding-top: 10px; 
+}
+.middle-section{
+    background-color: #add8e6;
+}
+img{
+    max-width: 5%;
+    margin-left: 15%;
+}
+.bottom-images div{
+    display: flex;
+}
+.join{
+    border:solid;
+    display: inline-block;
+    margin-top:30px;
+    margin-bottom:30px;
+    margin-left:15%;
+    padding-inline: 120px
+}
+h1 {
+    font-weight: normal;
+}
+.top-section p, .bottom-images p{
+    color: #808080;
+}
+.middle-section p{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.bottom-section p{
+    color: #808080;
+    text-align: center;
+}
+.join p{
+    color: #00d1ff;
+    font-size: 17px;
+    text-align: center;
+}
