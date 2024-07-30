@@ -4,83 +4,86 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Fourth Task</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="css/task4_v2.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body>
+    <body class="m-0">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <header>
             <!----header starts here--->
             <a id="home"></a>
             <div class="main-image">
                 <img src="img/image1.jpg" alt="main image">
             </div>
-            <div class="sections">
+            <div class="d-flex justify-content-center gap-lg-5 text-white fs-3" id="top1">
                 <p onclick="window.location.href='#home'">HOME</p>
                 <p onclick="window.location.href='#about'">ABOUT</p>
                 <p onclick="window.location.href='#skills'">SKILLS</p>
                 <p onclick="window.location.href='#projects'">PROJECTS</p>
                 <p onclick="window.location.href='#contact'">CONTACT</p>
             </div>
-            <div class="introduction">
+            <div class="text-center text-white fs-1" id="introduction">
                 <p>Hi There, I'm Salah Alali</p>
                 <p>A Software Engineering Intern At Orange</p>
             </div>
         </header>
         <!----About me section starts here---->
         <a id="about"></a>
-        <div class="about">
-            <div class="emoji">
+        <div class="d-flex mt-lg-5 ms-5 pt-lg-5 mb-xxl-5 pb-xxl-5" id="about">
+            <div class="ms-5">
                 <img src="img/image2.jpg" alt="snapchat character">
             </div>
-            <div class="about-me">
-                <h1>About</h1>
-                <div class="above">
+            <div class="col-5" id="about-me">
+                <h1 class="text-center pe-lg-5">About</h1>
+                <div class="fw-bold fs-5" id="above">
                     <p>Full Name</p>
                 </div>
-                <div class="below">
+                <div class="fw-light pb-md-4 text-secondary" id="below">
                     <p>Salah Alali</p>
                 </div>
-                <div class="above">
+                <div class="fw-bold fs-5" id="above">
                     <p>Nationality</p>
                 </div>
-                <div class="below">
+                <div class="fw-light pb-md-4 text-secondary" id="below">
                     <p>Jordanian but residing in Qatar</p>
                 </div>
-                <div class="above">
+                <div class="fw-bold fs-5" id="above">
                     <p>Occupation</p>
                 </div>
-                <div class="below">
+                <div class="fw-light pb-md-4 text-secondary" id="below">
                     <p>Intern at Orange Academy</p>
                 </div>
-                <div class="above">
+                <div class="fw-bold fs-5" id="above">
                     <p>Education Status</p>
                 </div>
-                <div class="below">
+                <div class="fw-light pb-md-4 text-secondary" id="below">
                     <p>Undergraduate At Qatar University</p>
                 </div>
                 <div class="brief">
-                    <div class="above">
+                    <div class="fw-bold fs-5" id="above">
                         <p>Background: </p>
                     </div>
-                    <div class="below">
-                        <p>I'm a passionate learner in pursuit of knowledge in the field of 
+                    <div class="fw-light pb-md-4 text-secondary" id="below">
+                        <p class="col-9">I'm a passionate learner in pursuit of knowledge in the field of 
                            tech and machine learning, in hopes of improving my skills in both front-end and back-end development.
                            In addition, I strive to be up to date with the latest advancements and technologies in the industry
                         </p>
                     </div>
                 </div>
-                <div class="cv">
-                    <button>DOWNLOAD CV</button>
+                <div id="cv">
+                    <button class="ps-4 pe-lg-4 pt-2 pb-2 text-white bg-secondary mt-2">DOWNLOAD CV</button>
                 </div>
             </div>
         </div>
         <!----Skills Section Starts here---->
         <div class="skills">
             <a id="skills"></a>
-            <div class="skills-header">
-                <p>Languages, tools, and compilers im able to use.</p>
+            <div class="mt-xxl-5 pt-xxl-5" id="skills-header">
+                <p class="text-center fs-2 mb-xxl-5 pb-xxl-5">Languages, tools, and compilers im able to use.</p>
             </div>
-            <div class="skills-logos">
+            <div class="d-flex justify-content-between ms-xxl-5 me-xxl-5 ps-xxl-5 pe-xxl-5" id="skills-logos">
                 <div class="java">
                     <img src="img/java.png" alt="java">
                     <p>Java</p>
@@ -116,10 +119,10 @@
             </div>
         </div>
         <div class="strengths">
-            <div class="strengths-header">
-                <p>Strong Suits</p>
+            <div class="text-center mt-xxl-5 mb-xxl-5 pt-xxl-5 pb-xxl-3 me-xxl-3" id="strengths-header">
+                <p class="fs-2">Strong Suits</p>
             </div>
-            <div class="strengths-logos">
+            <div class="ms-xxl-5 me-xxl-5 d-flex" id="strengths-logos">
                 <div class="extrovert">
                     <img src="img/extrovert.jpeg" alt="extrovert">
                     <p>Being socially extroverted, I find it easy to not only bond with others but also
@@ -149,7 +152,7 @@
         <div class="projects-picture">
             <img src="img/image3.jpg" alt="background picture">
         </div>
-        <div class="projects">
+        <div class="d-flex justify-content-between ms-xxl-5 ps-xxl-5" id="projects2">
             <div class="java-shipment">
                 <img src="img/project1.png" alt="java project">
                 <h2>Shipment Management System</h2>
@@ -199,24 +202,24 @@
         <footer>
             <a id="contact"></a>
             <div class="contact">
-                <div class="contact-header">
+                <div class="text-center ms-3" id="contact-header">
                     <p>Contact Details Below </p>
                 </div>
-                <div class="contact-info">
+                <div class="d-flex justify-content-between" id="contact-info">
                     <div class="phone-number">
                         <div class="top">
                             <p>PHONE NUMBER</p>
                         </div>
                         <div class="bottom">   
-                            <p>+962 786 399 183</p>
+                            <p class="text-primary">+962 786 399 183</p>
                         </div>     
                     </div>
-                    <div class="email">
+                    <div class="text-center" id="email">
                         <div class="top">
                             <p>EMAIL</p>
                         </div>
                         <div class="bottom">   
-                            <p>sa2308761@qu.edu.qa</p>
+                            <p class="text-primary">sa2308761@qu.edu.qa</p>
                         </div>    
                     </div>
                     <div class="address">
@@ -224,18 +227,18 @@
                             <p>ADDRESS</p>
                         </div>
                         <div class="bottom">    
-                            <p>Qatar - Pearl</p>
+                            <p class="text-primary">Qatar - Pearl</p>
                         </div>    
                     </div>
                 </div>
-                <div class="socials-apps">
+                <div class="d-flex justify-content-between mb-xxl-5 text-primary fs-2" id="socials-apps">
                     <a href="https://www.instagram.com/salah_alali123/" target="_blank"><i class="fa fa-instagram"></i></a>
                     <a href="https://www.facebook.com/profile.php?id=61556225453458&mibextid=LQQJ4d"><i class="fa fa-facebook"></i></a>
                     <a href="https://snapchat.com/t/toQ5bvRx" target="_blank"><i class="fa fa-snapchat"></i></a>
                 </div>
             </div>
-            <div class="back-to-top">
-                <button onclick="window.location.href='#home'">Back To Top</button>
+            <div class="fs-6" id="back-to-top">
+                <button class="text-white rounded-2 ps-xxl-4 pe-xxl-4 pt-xxl-3 pb-xxl-3 mb-xxl-5" onclick="window.location.href='#home'">Back To Top</button>
             </div>
         </footer>    
     </body>
