@@ -10,7 +10,7 @@
 <body>
     <div class="form-one" id="register">
         <div class="register-header">
-            <p>Register<p>
+            <p>Register</p>
         </div>
         <div class="row-one">
             <p>Your Fullname: </p>
@@ -43,6 +43,36 @@
         <div class="login-button">
             <button onclick="login()">login</button>
         </div>
+    </div>
+    <div class="form-three" id="exam-brief">
+        <div class="row-one">
+            <h2>Exam Brief</h2>
+        </div>
+        <div class="row-two">    
+            <p id ="name"></p>
+            <p>The exam consists of ten general knowledge questions, you will have 60 seconds to answer each one before you'll be
+               automatically given the next question, all of which are multiple choice questions and you'll be given your score at
+               the end
+            </p>
+        </div>
+        <div class="third-row">
+            <div class="start-button">  
+                <button onclick="start()">Start The Exam</button>
+            </div>    
+        </div>    
+    </div>
+    <div class="form-four" id="exam">
+        <h2>Question :</h2>
+        <div id="text-of-question"></div>
+        <div id="options"></div>
+        <div><p>Time left in seconds: </p> <p id="time">60</p></div>
+        <div class="nextOne">
+            <button onclick="next()">Next</button>
+        </div>    
+    </div>
+    <div class="form-five" id="results">
+        <div id="result-output"></div>
+        <div id="result-score"></div>
     </div>
 </body>
 </html>

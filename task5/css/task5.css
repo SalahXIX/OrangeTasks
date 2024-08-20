@@ -1,7 +1,7 @@
 body {
     margin:0;
 }
-.form-one, .form-two {
+.form-one, .form-two, .form-three, .form-four, .form-five {
     max-width: 600px;
     padding-top: 10px;
     background-color: #c9c4c4;
@@ -16,20 +16,43 @@ body {
     margin-left: 10px;
     margin-bottom: 10px;
 }
-.register-button, .login-button {
+.register-button, .login-button, .start-button {
     display:flex;
     align-items: center;
     justify-content: center;
 }
-.register-button button{
+.register-button button, .start-button button {
     margin-top: 15px;
     margin-bottom:30px;
     padding:10px;
     cursor: pointer;
+}
+#login {
+    display: none;
 }
 .login-button button{
     margin-top: 15px;
     margin-bottom:30px;
     padding:10px;
     cursor: pointer;
+}
+#exam-brief {
+    display: none;
+}
+#exam {
+    display:none;
+}
+.nextOne{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.nextOne button{
+    margin-top: 15px;
+    margin-bottom:30px;
+    padding:10px;
+    cursor: pointer;
+}
+#results {
+    display: none;
 }
