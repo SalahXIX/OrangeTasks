@@ -2,6 +2,10 @@ function registering(){
     const fullname= document.getElementById('fullname').value;
     const email = document.getElementById('email').value;
     const password= document.getElementById('password').value;
+    if (fullname == '' || email == '' || password == ''){
+        document.getElementById('errorMessage').innerHTML="Please Fill Out All The Fields"
+        return;
+    }
     sessionStorage.setItem('fullname',fullname);
     sessionStorage.setItem('EmailAdded', email);
     sessionStorage.setItem('PasswordAdded', password);
@@ -19,9 +23,9 @@ function login(){
         document.getElementById('exam-brief').style.display = 'block';
         fullname= sessionStorage.getItem('fullname');
         document.getElementById('name').innerHTML = `Welcome, ${fullname}`;
-        alert("You may proceed");
     } else {
-        alert ("either password or email is incorrect")
+        document.getElementById('loginError').innerHTML="Either The Email Or The Password Is Incorrect";
+       return;
     }
 }
 const questions= [{question: "what is the most common surname in the United States?", options: ["Williams", "Smith", "Johnson", "Jones"], answer: "Smith"},
@@ -46,7 +50,9 @@ function timerStart(){
         document.getElementById('time').innerHTML = remaining;
         if (remaining <=0){
             clearInterval(currentTime);
-            answers.appendChild('did not answer')
+            if (!answers[questionindex]) {
+                answers[questionindex] = 'did not answer';
+            }
             next();
         }
     }, 1000);
@@ -74,6 +80,7 @@ function display() {
         questions[questionindex].options.forEach(chosen => {
             const chosenButton = document.createElement('button');
             chosenButton.innerHTML=chosen;
+            chosenButton.className= 'option-button';
             chosenButton.onclick = ()=> selected(chosen);
             choices.appendChild(chosenButton);
         });
@@ -87,14 +94,20 @@ let correct=0;
 function resultDisplay() {
     document.getElementById('exam').style.display = 'none';
     document.getElementById('results').style.display = 'block';
+    const result= document.getElementById('result-output');
     for (let i=0; i<questions.length; i++){
         if (questions[i].answer == answers[i]){
             correct++;
         }
         const output= document.createElement('p');
-        output.innerHTML= 'for Question ${i + 1} : your answer: ${answers[i]}, Correct answer: ${questions[i].answer} \n';
-        document.getElementById('result-output').innerHTML= output;
+        if (answers[i] === undefined) {
+            output.innerHTML= `for Question ${i + 1} : your answer: <span class="wrong-answer"> did not answer </span>, Correct answer: <span class = "correct-answer"> ${questions[i].answer} </span>`;
+        } else if (answers[i] === questions[i].answer){
+            output.innerHTML= `for Question ${i + 1} : your answer: <span class = "correct-answer"> ${answers[i]} </span>, Correct answer: <span class = "correct-answer">${questions[i].answer} </span>`;
+        } else{
+            output.innerHTML= `for Question ${i + 1} : your answer: <span class = "wrong-answer"> ${answers[i]} </span>, Correct answer: <span class = "correct-answer">${questions[i].answer} </span>`;
+        }
+        result.appendChild(output);
     }
-    document.getElementById('result-score').innerHTML = 'your score is ${correct} out of 10';
+    document.getElementById('result-score').innerHTML = `your score is ${correct} out of 10`;
 }
-

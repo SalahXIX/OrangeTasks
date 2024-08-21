@@ -1,5 +1,6 @@
 body {
     margin:0;
+    background-color: #bb9696 ;
 }
 .form-one, .form-two, .form-three, .form-four, .form-five {
     max-width: 600px;
@@ -41,6 +42,17 @@ body {
 }
 #exam {
     display:none;
+    padding-left: 15px;
+}
+#text-of-question {
+    padding-bottom: 15px;;
+}
+.option-button {
+    margin: 8px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
 }
 .nextOne{
     display:flex;
@@ -53,6 +65,32 @@ body {
     padding:10px;
     cursor: pointer;
 }
+
 #results {
     display: none;
+}
+.results-header {
+    text-align: center;
+    font-size: 25px;
+}
+#result-output {
+    padding-left: 25px;
+}
+#result-score {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.wrong-answer {
+    color: #d21212;
+}
+.correct-answer {
+    color: #1d810b;
+}
+.error {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #d21212;
 }
